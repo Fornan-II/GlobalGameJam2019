@@ -25,23 +25,11 @@ public class Movement2D : MonoBehaviour
     {
         CheckIfGrounded();
 
-        //INPUT
-        //
         float inputVector = 0.0f;
+        inputVector += Input.GetAxisRaw("Horizontal");
+
         bool doJump = false;
-        if (Input.GetKey(KeyCode.A))
-        {
-            inputVector += -1.0f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            inputVector += 1.0f;
-        }
-        if(Input.GetKey(KeyCode.Space))
-        {
-            doJump = true;
-        }
-        //
+        doJump = Input.GetButton("Jump");
 
         MovementWithFriction(inputVector, doJump);
     }

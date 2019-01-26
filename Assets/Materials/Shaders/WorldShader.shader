@@ -8,7 +8,8 @@
 	_NoiseTex("Dissolve Noise", 2D) = "white"{}
 	_NScale("Noise Scale", Range(0, 10)) = 1
 		_DisAmount("Noise Texture Opacity", Range(0.01, 1)) = 0.01
-		_Radius("Radius", Range(0, 10)) = 0
+		_Position("Position", Vector) = (1000,1000,1000,0)
+		_Radius("Radius", Range(0, 50)) = 0
 		_DisLineWidth("Line Width", Range(0, 2)) = 0
 		_DisLineColor("Line Tint", Color) = (1,1,1,1)
 	}

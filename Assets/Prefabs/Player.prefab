@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 50772459442003608}
   - component: {fileID: 58508800187147388}
   - component: {fileID: 114101236464021748}
+  - component: {fileID: 114857764955188490}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645195960574284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -2.0917397, y: -0.9950003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4148439207838078}
@@ -271,6 +272,23 @@ MonoBehaviour:
   gravity: 20
   jumpForce: 10
   _isGrounded: 1
+--- !u!114 &114857764955188490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645195960574284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0452daf19189aa74995b28d3f7c9c544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementObject: {fileID: 114101236464021748}
+  HorizontalMoveAxis: Horizontal
+  JumpButton: Jump
+  Redbutton: 
+  BlueButton: 
+  GreenButton: 
 --- !u!135 &135977973970076052
 SphereCollider:
   m_ObjectHideFlags: 1
