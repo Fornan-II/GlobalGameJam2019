@@ -1630,6 +1630,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
+        type: 2}
+      propertyPath: TrackedMaterials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4922455871876112, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 12.4
@@ -1667,6 +1672,11 @@ Prefab:
       propertyPath: trackedElemental
       value: 
       objectReference: {fileID: 1119194723}
+    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
+        type: 2}
+      propertyPath: TrackedMaterials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8030e26a904e05c409d81de1901eba9e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
   m_IsPrefabAsset: 0
@@ -2395,7 +2405,8 @@ MonoBehaviour:
   colorRadius: 2.5
   grownRadius: 20
   isColored: 0
-  TrackedMaterial: {fileID: 2100000, guid: b35f54d728933fc4280631f311b5529f, type: 2}
+  TrackedMaterials:
+  - {fileID: 2100000, guid: b35f54d728933fc4280631f311b5529f, type: 2}
 --- !u!212 &1583302162
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2507,7 +2518,8 @@ MonoBehaviour:
   colorRadius: 2.5
   grownRadius: 20
   isColored: 0
-  TrackedMaterial: {fileID: 2100000, guid: 58e4e3168550cc4448ff44e633cced74, type: 2}
+  TrackedMaterials:
+  - {fileID: 2100000, guid: 58e4e3168550cc4448ff44e633cced74, type: 2}
 --- !u!212 &1643245472
 SpriteRenderer:
   m_ObjectHideFlags: 0

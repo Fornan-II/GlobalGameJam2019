@@ -11,6 +11,7 @@ public class Movement2D : MonoBehaviour
     public Vector2 currentSpeed;
     public float gravity = 20.0f;
     public float jumpForce = 5.0f;
+    public float maxGroundedAngle = 45.0f;
 
     public enum FacingDir
     {
@@ -124,8 +125,15 @@ public class Movement2D : MonoBehaviour
             r = cc.radius;
         }
 
-        int results = Physics2D.CircleCastNonAlloc(transform.position, r, Vector2.down, new RaycastHit2D[2], 0.05f);
+        RaycastHit2D[] hitInfo = new RaycastHit2D[2];
+        int results = Physics2D.CircleCastNonAlloc(transform.position - (Vector3.up * 0.05f), r, Vector2.down, hitInfo, 0.05f);
         //Debug.Log(results);
+
+        if(1 < results)
+        {
+            Vector3.Angle(hitInfo[1].normal, Vector3.up);
+        }
+
         _isGrounded = 1 < results;
     }
 }
