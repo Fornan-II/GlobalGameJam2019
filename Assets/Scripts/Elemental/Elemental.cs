@@ -8,6 +8,9 @@ public class Elemental : MonoBehaviour
 
     public bool FollowPlayer;
     public Transform player;
+    public Transform target;
+    public float interactRange = 10.0f;
+    public bool dontLetInteract = false;
 
 	void Awake ()
     {
@@ -21,6 +24,21 @@ public class Elemental : MonoBehaviour
 
     public void DoInteract()
     {
-        Debug.Log("Aah!");
+        if(dontLetInteract)
+        {
+            return;
+        }
+
+        Debug.Log(name + " trying to interact...");
+
+        ElementNode nodeToInteractWith = ElementNode.GetNearestNode(transform.position, interactRange, true);
+        target = nodeToInteractWith.transform;
+        dontLetInteract = true;
+    }
+
+    protected IEnumerator TriggerNodeInteract(ElementNode interactTarget)
+    {
+        yield return new WaitForSeconds(1.0f);
+        interactTarget.OnInteract(this);
     }
 }
