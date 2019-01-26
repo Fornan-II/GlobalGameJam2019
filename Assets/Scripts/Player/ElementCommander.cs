@@ -14,25 +14,36 @@ public class ElementCommander : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(RedButton != "" && redElement)
+        if(redElement)
         {
-            if (Input.GetButtonDown(RedButton))
+            if (RedButton != "")
             {
-                redElement.DoInteract();
+                if (Input.GetButtonDown(RedButton))
+                {
+                    redElement.DoInteract();
+                }
             }
         }
-        if(BlueButton != "" && blueElement)
+
+        if(blueElement)
         {
-            if (Input.GetButtonDown(BlueButton))
+            if (BlueButton != "")
             {
-                blueElement.DoInteract();
+                if (Input.GetButtonDown(BlueButton))
+                {
+                    blueElement.DoInteract();
+                }
             }
         }
-        if(GreenButton != "" && greenElement)
+
+        if(greenElement)
         {
-            if (Input.GetButtonDown(GreenButton))
+            if (GreenButton != "")
             {
-                greenElement.DoInteract();
+                if (Input.GetButtonDown(GreenButton))
+                {
+                    greenElement.DoInteract();
+                }
             }
         }
     }

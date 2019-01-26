@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BlueWorldColor
+  m_Name: GreenWorldColor
   m_Shader: {fileID: 4800000, guid: ee94458c6c0bb5741bfd29fde43a984e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -89,7 +89,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color2: {r: 0, g: 0.0816164, b: 1, a: 1}
+    - _Color2: {r: 0.27058825, g: 0.8784314, b: 0.32941177, a: 1}
     - _DisLineColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Position: {r: -14.95, g: 6.45, b: 0, a: 0}
+    - _Position: {r: -4.2, g: 11.21, b: 0, a: 0}
