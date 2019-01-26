@@ -42,11 +42,13 @@ public class ElementNode : MonoBehaviour {
     }
     //
 
+    public Elemental trackedElemental;
     public Transform trackedTransform;   //by default, set this to the elemental of this node
-    public float colorRadius = 2.5f;
+    public float colorRadius = 1.5f;
     public float grownRadius = 20.0f;
     public bool isColored = false;
     public Material TrackedMaterial;
+    protected Animator _anim;
 
 	void Awake ()
     {
@@ -57,23 +59,34 @@ public class ElementNode : MonoBehaviour {
     {
         allNodes.Remove(this);
     }
-    
+
+    private void Start()
+    {
+        _anim = GetComponent<Animator>();
+        trackedTransform = trackedElemental.transform;
+    }
+
     void Update ()
     {
         if (TrackedMaterial)
         {
-            TrackedMaterial.SetVector("_Position", transform.position);
+            TrackedMaterial.SetVector("_Position", trackedTransform.position);
             TrackedMaterial.SetFloat("_Radius", colorRadius);
         }
     }
 
     public virtual void OnInteract(Elemental source)
     {
+        Debug.Log("Interact!");
         //if(!isColored), then...
-        //Shrink radius down to zero.
-        //Set trackedTransfrom to this object's transform.
-        //Grow the radius up to grownRadius.
-        //isColored = true;
-        //source.dontLetInteract = false;
+        if (!isColored && _anim)
+        {
+            _anim.SetTrigger("Interact");
+        }
+    }
+
+    public virtual void SetTrackedToThis()
+    {
+        trackedTransform = transform;
     }
 }

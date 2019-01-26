@@ -74,8 +74,8 @@
 		float3 DissolveLine = step(sphereNoise - _DisLineWidth, _DisAmount) * step(_DisAmount,sphereNoise); // line between two textures
 		DissolveLine *= _DisLineColor; // color the line
 
-		float3 primaryTex = (step(sphereNoise - _DisLineWidth,_DisAmount) * c.rgb);
-		float3 secondaryTex = (step(_DisAmount, sphereNoise) * c2.rgb);
+		float3 primaryTex = (step(sphereNoise - _DisLineWidth,_DisAmount) * c.rgba);
+		float3 secondaryTex = (step(_DisAmount, sphereNoise) * c2.rgba);
 		float3 resultTex = primaryTex + secondaryTex + DissolveLine;
 		o.Albedo = resultTex;
 
