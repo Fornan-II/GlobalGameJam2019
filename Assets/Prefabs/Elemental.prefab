@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 1
-  myElemental: {fileID: 0}
+  myElemental: {fileID: 114739605053116632}
   objectOfInterest: {fileID: 0}
   pointOfInterest: {x: 0, y: 0}
   followRange: 2.5
