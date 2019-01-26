@@ -47,7 +47,7 @@ public class ElementNode : MonoBehaviour {
     public float colorRadius = 1.5f;
     public float grownRadius = 20.0f;
     public bool isColored = false;
-    public Material TrackedMaterial;
+    public Material[] TrackedMaterials;
     protected Animator _anim;
 
 	void Awake ()
@@ -68,10 +68,13 @@ public class ElementNode : MonoBehaviour {
 
     void Update ()
     {
-        if (TrackedMaterial)
+        if (TrackedMaterials.Length >= 1)
         {
-            TrackedMaterial.SetVector("_Position", trackedTransform.position);
-            TrackedMaterial.SetFloat("_Radius", colorRadius);
+            foreach(Material m in TrackedMaterials)
+            {
+                m.SetVector("_Position", trackedTransform.position);
+                m.SetFloat("_Radius", colorRadius);
+            }
         }
     }
 
@@ -81,6 +84,7 @@ public class ElementNode : MonoBehaviour {
         //if(!isColored), then...
         if (!isColored && _anim)
         {
+            isColored = true;
             _anim.SetTrigger("Interact");
         }
     }
