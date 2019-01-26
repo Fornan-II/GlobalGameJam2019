@@ -7350,7 +7350,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 4289abe27cec9794482e4229890f2eae, type: 2}
+  - {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
   - {fileID: 2100000, guid: 1300ac2d4f3821648a0464a241d15116, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -12778,6 +12778,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 728246117}
     m_Modifications:
+    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
+        type: 2}
+      propertyPath: TrackedMaterials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4922455871876112, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 46.03
@@ -12818,6 +12823,11 @@ Prefab:
     - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
         type: 2}
       propertyPath: TrackedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
+    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
+        type: 2}
+      propertyPath: TrackedMaterials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
     m_RemovedComponents: []
