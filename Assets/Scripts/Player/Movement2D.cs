@@ -12,6 +12,13 @@ public class Movement2D : MonoBehaviour
     public float gravity = 20.0f;
     public float jumpForce = 5.0f;
 
+    public enum FacingDir
+    {
+        Right,
+        Left
+    }
+    public FacingDir CurrentFacing = FacingDir.Left;
+
     [SerializeField] private bool _isGrounded = true;
 
     private Rigidbody2D _rb;
@@ -27,6 +34,14 @@ public class Movement2D : MonoBehaviour
 
         float inputVector = 0.0f;
         inputVector += Input.GetAxisRaw("Horizontal");
+        if(inputVector > 0.0f)
+        {
+            CurrentFacing = FacingDir.Right;
+        }
+        else if(inputVector < 0.0f)
+        {
+            CurrentFacing = FacingDir.Left;
+        }
 
         bool doJump = false;
         doJump = Input.GetButton("Jump");
