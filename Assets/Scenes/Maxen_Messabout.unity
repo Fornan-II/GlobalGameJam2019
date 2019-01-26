@@ -779,6 +779,7 @@ MonoBehaviour:
   speedMultiplier: 1
   turningSpeed: 30
   turningMultiplier: 1
+  interactTimeOut: 0
 --- !u!114 &379667248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2845,6 +2846,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1807412101}
+    - target: {fileID: 114694997765581268, guid: ba6a76a89511e5943a32ada385ea92df,
+        type: 2}
+      propertyPath: interactTimeOut
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6a76a89511e5943a32ada385ea92df, type: 2}
   m_IsPrefabAsset: 0
@@ -3211,6 +3217,7 @@ MonoBehaviour:
   speedMultiplier: 1
   turningSpeed: 30
   turningMultiplier: 1
+  interactTimeOut: 0
 --- !u!114 &1848580432
 MonoBehaviour:
   m_ObjectHideFlags: 0

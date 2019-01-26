@@ -81,8 +81,16 @@ public class ElementalBehavior : MonoBehaviour
         transform.position += transform.right * moveSpeed * speedMultiplier * Time.fixedDeltaTime;
     }
 
+    public float interactTimeOut = 10.0f;
+    protected Coroutine interactTimeOuter;
+
     protected virtual void ProcessStateInteract()
     {
+        if(interactTimeOuter == null)
+        {
+            interactTimeOuter = StartCoroutine(InteractTimeOut(interactTimeOut));
+        }
+
         if (objectOfInterest)
         {
             pointOfInterest = objectOfInterest.transform.position;
@@ -107,6 +115,7 @@ public class ElementalBehavior : MonoBehaviour
                 ElementNode node = objectOfInterest.GetComponent<ElementNode>();
                 if (node)
                 {
+                    StopCoroutine(interactTimeOuter);
                     StartCoroutine(TriggerNodeInteract(1.0f, node));
                 }
             }
@@ -137,5 +146,18 @@ public class ElementalBehavior : MonoBehaviour
         myElemental.dontLetInteract = false;
         objectOfInterest = myElemental.player;
         CurrentState = State.FOLLOW;
+    }
+
+    protected IEnumerator InteractTimeOut(float t)
+    {
+        Debug.Log("time outter");
+        yield return new WaitForSeconds(t);
+        //If just to be safe (or maybe lazy)
+        if(CurrentState == State.INTERACT)
+        {
+            myElemental.dontLetInteract = false;
+            objectOfInterest = myElemental.player;
+            CurrentState = State.FOLLOW;
+        }
     }
 }
