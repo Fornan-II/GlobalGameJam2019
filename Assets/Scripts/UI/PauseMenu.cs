@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class PauseMenu : MonoBehaviour {
+
+    public GameObject MenuPanel;
+
+    // Use this for initialization
+    void Start()
+    {
+        //Cursor.lockState = CursorLockMode.Locked;
+        MenuPanel.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            PauseGame();
+        }
+    }
+
+    void PauseGame()
+    {
+        MenuPanel.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void ContinueGame()
+    {
+        MenuPanel.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void LeaveGame()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Application.Quit();
+    }
+}
