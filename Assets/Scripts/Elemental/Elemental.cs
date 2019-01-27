@@ -6,6 +6,7 @@ public class Elemental : MonoBehaviour
 {
     public static List<Elemental> ActiveElementals = new List<Elemental>();
 
+    public bool HasBefriendedPlayer = false;
     public string InteractButton;
     public bool FollowPlayer;
     public Transform player;
