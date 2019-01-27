@@ -14,8 +14,11 @@ public class Elemental : MonoBehaviour
     public bool dontLetInteract = false;
     public ElementalBehavior myBehavior;
 
+    public Animator _anim;
+
 	void Awake ()
     {
+        _anim = gameObject.GetComponentInChildren<Animator>();
         ActiveElementals.Add(this);
 	}
 
@@ -35,6 +38,8 @@ public class Elemental : MonoBehaviour
 
         if(node)
         {
+            _anim.ResetTrigger("Idle");
+            _anim.SetTrigger("Follow");
             otherTarget = node.transform;
             myBehavior.objectOfInterest = otherTarget;
             myBehavior.CurrentState = ElementalBehavior.State.INTERACT;
