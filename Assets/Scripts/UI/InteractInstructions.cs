@@ -31,6 +31,7 @@ public class InteractInstructions : MonoBehaviour {
                     Debug.Log("pressed R");
                     
                     instructions.text = "";
+                    instructions.enabled = false;
                 }
             }
 
@@ -42,6 +43,7 @@ public class InteractInstructions : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.B))
                 {
+                    instructions.text = "";
                     instructions.enabled = false;
                 }
             }
@@ -53,9 +55,15 @@ public class InteractInstructions : MonoBehaviour {
 
                 if(Input.GetKeyDown(KeyCode.B))
                 {
+                    instructions.text = "";
                     instructions.enabled = false;
                 }
             }
+        }
+        else
+        {
+            instructions.text = "";
+            instructions.enabled = false;
         }
     }
 }

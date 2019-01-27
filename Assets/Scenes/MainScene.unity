@@ -5741,6 +5741,21 @@ Prefab:
       propertyPath: greenElement
       value: 
       objectReference: {fileID: 844309312}
+    - target: {fileID: 50772459442003608, guid: a33a85815f752c44e944c947ceba6d10,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101236464021748, guid: a33a85815f752c44e944c947ceba6d10,
+        type: 2}
+      propertyPath: gravity
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114101236464021748, guid: a33a85815f752c44e944c947ceba6d10,
+        type: 2}
+      propertyPath: jumpForce
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33a85815f752c44e944c947ceba6d10, type: 2}
   m_IsPrefabAsset: 0
@@ -9407,7 +9422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1367940493
 Transform:
   m_ObjectHideFlags: 0
