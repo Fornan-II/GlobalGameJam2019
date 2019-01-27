@@ -150,8 +150,14 @@ public class ElementalBehavior : MonoBehaviour
 
     protected IEnumerator InteractTimeOut(float t)
     {
-        Debug.Log("time outter");
+        Debug.Log("time outter start...");
+        if(t <= 0.0f)
+        {
+            Debug.LogWarning("Time out value set to less than or equal to 0, defaulting to 10");
+            t = 10.0f;
+        }
         yield return new WaitForSeconds(t);
+        Debug.Log("Timed out.");
         //If just to be safe (or maybe lazy)
         if(CurrentState == State.INTERACT)
         {
