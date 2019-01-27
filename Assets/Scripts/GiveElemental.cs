@@ -30,9 +30,10 @@ public class GiveElemental : MonoBehaviour
             {
                 ec.blueElement = myElemental;
             }
-
+            
             myElemental.HasBefriendedPlayer = true;
             myElemental.myBehavior.CurrentState = ElementalBehavior.State.FOLLOW;
+            myElemental.myBehavior.objectOfInterest = myElemental.player;
             gameObject.SetActive(false);
         }
     }
