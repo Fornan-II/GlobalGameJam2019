@@ -25,7 +25,7 @@ public class ElementCommander : MonoBehaviour
         ElementNode nodeToInteractWith = ElementNode.GetNearestNode(transform.position, interactRange, true);
         if(nodeToInteractWith)
         {
-            WithinInteractRange = true;
+            WithinInteractRange = !nodeToInteractWith.trackedElemental.dontLetInteract;
             RequiredInteractButton = nodeToInteractWith.trackedElemental.InteractButton;
 
             if (redElement)

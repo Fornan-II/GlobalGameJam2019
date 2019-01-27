@@ -52,10 +52,16 @@ public class ElementalBehavior : MonoBehaviour
             pointOfInterest = objectOfInterest.transform.position;
         }
         Vector2 position = transform.position;
-        Vector2 moveDir = position - pointOfInterest;
+        Vector2 moveDir = pointOfInterest - position;
         float angleBetween = Vector2.SignedAngle(transform.right, moveDir);
         float rotRange = 1.0f;
-        if (moveDir.sqrMagnitude > followRange * followRange)
+        if (moveDir.sqrMagnitude > farAwayRange * farAwayRange)
+        {
+            transform.Rotate(Vector3.forward, angleBetween);
+            rotRange = 0.0f;
+            speedMultiplier = Mathf.Clamp(speedMultiplier + Time.fixedDeltaTime, 1.0f, 7.0f);
+        }
+        else if (moveDir.sqrMagnitude > followRange * followRange)
         {
             rotRange = 3.0f;
             speedMultiplier = Mathf.Clamp(speedMultiplier + Time.fixedDeltaTime, 1.0f, 3.0f);
