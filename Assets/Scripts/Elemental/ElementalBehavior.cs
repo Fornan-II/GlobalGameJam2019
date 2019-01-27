@@ -165,11 +165,9 @@ public class ElementalBehavior : MonoBehaviour
         yield return new WaitForSeconds(t);
         Debug.Log("Timed out.");
         //If just to be safe (or maybe lazy)
-        if(CurrentState == State.INTERACT)
-        {
-            myElemental.dontLetInteract = false;
-            objectOfInterest = myElemental.player;
-            CurrentState = State.FOLLOW;
-        }
+        myElemental.dontLetInteract = false;
+        objectOfInterest = myElemental.player;
+        CurrentState = State.FOLLOW;
+        interactTimeOuter = null;
     }
 }
