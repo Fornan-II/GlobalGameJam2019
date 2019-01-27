@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class ElementCommander : MonoBehaviour
 {
-    public string RedButton;
-    public string BlueButton;
-    public string GreenButton;
-
     public Elemental redElement;
     public Elemental blueElement;
     public Elemental greenElement;
