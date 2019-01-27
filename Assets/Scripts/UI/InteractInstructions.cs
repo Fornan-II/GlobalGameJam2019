@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class InteractInstructions : MonoBehaviour {
 
+    public ElementCommander elementComm;
+    public string buttonColor;
     public Text instructions;
 
 	// Use this for initialization
@@ -14,19 +16,46 @@ public class InteractInstructions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        // if near node
-        //instructions.enabled = true;
+        if (elementComm.WithinInteractRange)
+        {
+            buttonColor = elementComm.RequiredInteractButton;
+            instructions.enabled = true;
 
-        //if node is red
-        instructions.text = "Press R";
-        instructions.color = Color.red;
+            if (buttonColor == "Red Button")
+            {
+                instructions.text = "Press R";
+                instructions.color = Color.red;
 
-        //if node is blue
-        instructions.text = "Press B";
-        instructions.color = Color.blue;
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    Debug.Log("pressed R");
+                    
+                    instructions.text = "";
+                }
+            }
 
-        //if node is green
-        instructions.text = "Press G";
-        instructions.color = Color.green;
+
+            if (buttonColor == "Blue Button")
+            {
+                instructions.text = "Press B";
+                instructions.color = Color.blue;
+
+                if (Input.GetKeyDown(KeyCode.B))
+                {
+                    instructions.enabled = false;
+                }
+            }
+
+            if (buttonColor == "Green Button")
+            {
+                instructions.text = "Press G";
+                instructions.color = Color.green;
+
+                if(Input.GetKeyDown(KeyCode.B))
+                {
+                    instructions.enabled = false;
+                }
+            }
+        }
     }
 }
