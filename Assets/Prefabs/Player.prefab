@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 1255377303648266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6724, y: 1.6724, z: 1.6724}
   m_Children: []
   m_Father: {fileID: 4978056423750380}
   m_RootOrder: 0
@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1716940076823364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.259, z: 0}
+  m_LocalPosition: {x: 0, y: 0.007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4978056423750380}
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1645195960574284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.8, y: 21.491, z: 0.24}
+  m_LocalPosition: {x: -39.81, y: 21.477, z: -0.431}
   m_LocalScale: {x: 0.84, y: 0.84, z: 0.84}
   m_Children:
   - {fileID: 4598166070746290}
@@ -251,7 +251,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027224101, y: -0.22494002}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.28083208
 --- !u!81 &81717972042787312
@@ -338,6 +338,8 @@ MonoBehaviour:
   gravity: 20
   jumpForce: 10
   maxGroundedAngle: 45
+  _anim: {fileID: 0}
+  playerSprite: {fileID: 212683559767171902}
   CurrentFacing: 1
   _isGrounded: 1
 --- !u!135 &135977973970076052
