@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 
+    public StartMenu startMenu;
     public GameObject MenuPanel;
 
     // Use this for initialization
@@ -20,7 +20,10 @@ public class PauseMenu : MonoBehaviour {
     {
         if (Input.GetKeyDown("escape"))
         {
-            PauseGame();
+            if (startMenu.started)
+            {
+                PauseGame();
+            }
         }
     }
 

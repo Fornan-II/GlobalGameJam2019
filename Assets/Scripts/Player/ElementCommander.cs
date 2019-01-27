@@ -12,39 +12,55 @@ public class ElementCommander : MonoBehaviour
     public Elemental blueElement;
     public Elemental greenElement;
 
+    public float interactRange = 10.0f;
+    public bool WithinInteractRange
+    {
+        private set;
+        get;
+    }
+
     private void FixedUpdate()
     {
-        if(redElement)
+        ElementNode nodeToInteractWith = ElementNode.GetNearestNode(transform.position, interactRange, true);
+        if(nodeToInteractWith)
         {
-            if (RedButton != "")
+            WithinInteractRange = true;
+            if (redElement)
             {
-                if (Input.GetButtonDown(RedButton))
+                if (RedButton != "")
                 {
-                    redElement.DoInteract();
+                    if (Input.GetButtonDown(RedButton))
+                    {
+                        redElement.DoInteract(nodeToInteractWith);
+                    }
+                }
+            }
+
+            if (blueElement)
+            {
+                if (BlueButton != "")
+                {
+                    if (Input.GetButtonDown(BlueButton))
+                    {
+                        blueElement.DoInteract(nodeToInteractWith);
+                    }
+                }
+            }
+
+            if (greenElement)
+            {
+                if (GreenButton != "")
+                {
+                    if (Input.GetButtonDown(GreenButton))
+                    {
+                        greenElement.DoInteract(nodeToInteractWith);
+                    }
                 }
             }
         }
-
-        if(blueElement)
+        else
         {
-            if (BlueButton != "")
-            {
-                if (Input.GetButtonDown(BlueButton))
-                {
-                    blueElement.DoInteract();
-                }
-            }
-        }
-
-        if(greenElement)
-        {
-            if (GreenButton != "")
-            {
-                if (Input.GetButtonDown(GreenButton))
-                {
-                    greenElement.DoInteract();
-                }
-            }
+            WithinInteractRange = false;
         }
     }
 }

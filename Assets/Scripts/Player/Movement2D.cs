@@ -154,17 +154,20 @@ public class Movement2D : MonoBehaviour
         }
 
         RaycastHit2D[] hitInfo = new RaycastHit2D[2];
-        int results = Physics2D.CircleCastNonAlloc(transform.position - (Vector3.up * 0.05f), r, Vector2.down, hitInfo, 0.05f);
+        int results = Physics2D.CircleCastNonAlloc(transform.position + (Vector3.down * 0.05f), r * 0.6f, Vector2.down, hitInfo, 0.05f);
         //Debug.Log(results);
 
-        if(1 < results)
+		_isGrounded = false;
+        /* if(1 < results)
         {
-            Vector3.Angle(hitInfo[1].normal, Vector3.up);
+            float floorAngle = Vector3.Angle(hitInfo[1].normal, Vector3.up);
 
-        }
-
-
-
+            if (floorAngle <= maxGroundedAngle)
+			{
+                Debug.Log("good groundcheck");
+                _isGrounded = true;
+			}
+        }*/
         _isGrounded = 1 < results;
     }
 }
