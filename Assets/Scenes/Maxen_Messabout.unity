@@ -953,10 +953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7184c943ff6670c41aa1c376029c978e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractButton: Green Button
   FollowPlayer: 0
   player: {fileID: 1807412101}
   otherTarget: {fileID: 0}
-  interactRange: 10
   dontLetInteract: 0
   myBehavior: {fileID: 379667247}
 --- !u!4 &379667249
@@ -3917,6 +3917,11 @@ Prefab:
       propertyPath: interactTimeOut
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114739605053116632, guid: ba6a76a89511e5943a32ada385ea92df,
+        type: 2}
+      propertyPath: InteractButton
+      value: Red Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6a76a89511e5943a32ada385ea92df, type: 2}
   m_IsPrefabAsset: 0
@@ -4295,10 +4300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7184c943ff6670c41aa1c376029c978e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractButton: Blue Button
   FollowPlayer: 0
   player: {fileID: 1807412101}
   otherTarget: {fileID: 0}
-  interactRange: 10
   dontLetInteract: 0
   myBehavior: {fileID: 1848580431}
 --- !u!4 &1848580433

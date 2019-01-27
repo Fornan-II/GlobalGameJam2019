@@ -18,6 +18,11 @@ public class ElementCommander : MonoBehaviour
         private set;
         get;
     }
+    public string RequiredInteractButton
+    {
+        private set;
+        get;
+    }
 
     private void FixedUpdate()
     {
@@ -25,11 +30,13 @@ public class ElementCommander : MonoBehaviour
         if(nodeToInteractWith)
         {
             WithinInteractRange = true;
+            RequiredInteractButton = nodeToInteractWith.trackedElemental.InteractButton;
+
             if (redElement)
             {
-                if (RedButton != "")
+                if (redElement.InteractButton != "")
                 {
-                    if (Input.GetButtonDown(RedButton))
+                    if (Input.GetButtonDown(redElement.InteractButton))
                     {
                         redElement.DoInteract(nodeToInteractWith);
                     }
@@ -38,9 +45,9 @@ public class ElementCommander : MonoBehaviour
 
             if (blueElement)
             {
-                if (BlueButton != "")
+                if (blueElement.InteractButton != "")
                 {
-                    if (Input.GetButtonDown(BlueButton))
+                    if (Input.GetButtonDown(blueElement.InteractButton))
                     {
                         blueElement.DoInteract(nodeToInteractWith);
                     }
@@ -49,9 +56,9 @@ public class ElementCommander : MonoBehaviour
 
             if (greenElement)
             {
-                if (GreenButton != "")
+                if (greenElement.InteractButton != "")
                 {
-                    if (Input.GetButtonDown(GreenButton))
+                    if (Input.GetButtonDown(greenElement.InteractButton))
                     {
                         greenElement.DoInteract(nodeToInteractWith);
                     }
@@ -61,6 +68,7 @@ public class ElementCommander : MonoBehaviour
         else
         {
             WithinInteractRange = false;
+            RequiredInteractButton = "";
         }
     }
 }

@@ -38,7 +38,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonRed
+    m_Name: Red Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -54,7 +54,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonBlue
+    m_Name: Blue Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -70,7 +70,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonGreen
+    m_Name: Green Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -182,7 +182,7 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonRed
+    m_Name: Red Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -198,7 +198,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonBlue
+    m_Name: Blue Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -214,7 +214,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: ButtonGreen
+    m_Name: Green Button
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
