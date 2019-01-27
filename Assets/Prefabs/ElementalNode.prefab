@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445041465174522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.4, y: -0.71, z: 0}
+  m_LocalPosition: {x: 36.54, y: -11.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,10 @@ MonoBehaviour:
   colorRadius: 2.5
   grownRadius: 20
   isColored: 0
-  TrackedMaterial: {fileID: 0}
+  TrackedMaterials:
+  - {fileID: 2100000, guid: 36cfb211c22e7b84babb656e6546eaf8, type: 2}
+  - {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
+  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
 --- !u!212 &212440530934051718
 SpriteRenderer:
   m_ObjectHideFlags: 1

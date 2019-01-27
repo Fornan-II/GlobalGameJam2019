@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Grass
+  m_Name: GrassDark
   m_Shader: {fileID: 4800000, guid: ee94458c6c0bb5741bfd29fde43a984e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,8 +40,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1.01, y: 0.15}
-        m_Offset: {x: -0.06, y: -1.72}
+        m_Scale: {x: 36.9, y: 1.54}
+        m_Offset: {x: -0.77, y: 1.02}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,9 +63,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SecondTex:
-        m_Texture: {fileID: 2800000, guid: 019eb16db6b9a6545b132532c35fba78, type: 3}
-        m_Scale: {x: 1.01, y: 0.15}
-        m_Offset: {x: -0.06, y: -1.72}
+        m_Texture: {fileID: 2800000, guid: b2503460af8db764283e900e98b2d335, type: 3}
+        m_Scale: {x: 36.9, y: 1.54}
+        m_Offset: {x: -0.77, y: 1.02}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -74,7 +74,7 @@ Material:
     - _DisLineWidth: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0

@@ -202,7 +202,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.51444185, y: -0.025273617}
+  - {x: -0.49996662, y: -0.012817267}
 --- !u!1 &35166402
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +439,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -808,7 +809,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 776bc5f1c6c89854b841fe91a3bd86a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8699999
+      value: -1.93
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 776bc5f1c6c89854b841fe91a3bd86a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1036,7 +1037,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: 20072a1552a157e4eaa8f0fdabd6bcc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1174,7 +1175,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5194999, y: -0.021353848}
+  - {x: -0.49564236, y: -0.01146326}
 --- !u!1 &240686265
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1492,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5101544, y: -0.023358606}
+  - {x: -0.48768595, y: -0.022361439}
 --- !u!1001 &308992662
 Prefab:
   m_ObjectHideFlags: 0
@@ -3059,7 +3062,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4034,7 +4037,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4279,7 +4282,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4347,7 +4350,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.51603293, y: -0.022582423}
+  - {x: -0.49508244, y: -0.009324762}
 --- !u!1 &762484443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,7 +6002,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.51039076, y: -0.005817384}
+  - {x: -0.50326115, y: 0.0022404282}
 --- !u!1001 &1013312570
 Prefab:
   m_ObjectHideFlags: 0
@@ -6370,7 +6375,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.548216, y: -0.026875122}
+  - {x: -0.4902249, y: -0.015792508}
 --- !u!1001 &1117574374
 Prefab:
   m_ObjectHideFlags: 0
@@ -7332,7 +7338,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5207016, y: -0.022264179}
+  - {x: -0.48451298, y: -0.017561054}
 --- !u!1001 &1221455040
 Prefab:
   m_ObjectHideFlags: 0
@@ -7524,7 +7531,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.526011, y: -0.027075259}
+  - {x: -0.49650255, y: -0.0065821293}
 --- !u!1001 &1303867066
 Prefab:
   m_ObjectHideFlags: 0
@@ -7849,7 +7857,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.52969486, y: -0.026616829}
+  - {x: -0.50688493, y: -0.029081555}
 --- !u!1 &1367940492
 GameObject:
   m_ObjectHideFlags: 0
@@ -8101,7 +8110,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8624,7 +8633,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5164214, y: -0.028837103}
+  - {x: -0.50290126, y: -0.0022957926}
 --- !u!1 &1474453266
 GameObject:
   m_ObjectHideFlags: 0
@@ -8953,7 +8963,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5143208, y: -0.019025298}
+  - {x: -0.49147016, y: -0.014166772}
 --- !u!1001 &1514438837
 Prefab:
   m_ObjectHideFlags: 0
@@ -9901,7 +9912,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 36cfb211c22e7b84babb656e6546eaf8, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10321,7 +10332,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11002,7 +11013,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.49949655, y: -0.015363392}
+  - {x: -0.50745296, y: -0.0109334355}
 --- !u!1 &1750052300
 GameObject:
   m_ObjectHideFlags: 0
@@ -11150,7 +11162,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5399496, y: -0.032945976}
+  - {x: -0.48894525, y: -0.015628716}
 --- !u!4 &1791130818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4059574287639814, guid: ba6a76a89511e5943a32ada385ea92df,
@@ -11184,7 +11197,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.526584, y: -0.030942572}
+  - {x: -0.4936202, y: -0.014205216}
 --- !u!1001 &1805881331
 Prefab:
   m_ObjectHideFlags: 0
@@ -12917,7 +12931,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: 20072a1552a157e4eaa8f0fdabd6bcc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13099,7 +13113,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e6d57a0985f428145a67c8679b1d0576, type: 2}
+  - {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13908,7 +13922,8 @@ EdgeCollider2D:
   - {x: -0.501932, y: 0.0064527774}
   - {x: -0.32917142, y: 0.257164}
   - {x: 0.26936066, y: 0.2615762}
-  - {x: 0.49901676, y: 0.00008040524}
+  - {x: 0.5427477, y: -0.04488491}
+  - {x: -0.48073167, y: -0.010015124}
 --- !u!1001 &2119170559
 Prefab:
   m_ObjectHideFlags: 0
@@ -14032,11 +14047,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 728246117}
     m_Modifications:
-    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
-        type: 2}
-      propertyPath: TrackedMaterials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4922455871876112, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 36.54
@@ -14074,25 +14084,15 @@ Prefab:
       propertyPath: trackedElemental
       value: 
       objectReference: {fileID: 1582930873}
-    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
-        type: 2}
-      propertyPath: TrackedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
-    - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
-        type: 2}
-      propertyPath: TrackedMaterials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 36cfb211c22e7b84babb656e6546eaf8, type: 2}
     - target: {fileID: 1445041465174522, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
       propertyPath: m_Name
       value: RedElementalNode
       objectReference: {fileID: 0}
     - target: {fileID: 114681748032986990, guid: aabe6284a5e0d024da072cf6efa7bb9f,
         type: 2}
-      propertyPath: TrackedMaterials.Array.data[1]
+      propertyPath: TrackedMaterials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f6479f59e5eca84db48933b95ef27d2, type: 2}
+      objectReference: {fileID: 2100000, guid: bff9e4c9c65082d40bd20ffb313a108f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aabe6284a5e0d024da072cf6efa7bb9f, type: 2}
   m_IsPrefabAsset: 0
