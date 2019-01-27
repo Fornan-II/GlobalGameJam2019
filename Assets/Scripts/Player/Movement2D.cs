@@ -13,6 +13,10 @@ public class Movement2D : MonoBehaviour
     public float jumpForce = 5.0f;
     public float maxGroundedAngle = 45.0f;
 
+    //kv
+    public Animator _anim;
+    public SpriteRenderer playerSprite;
+
     public enum FacingDir
     {
         Right,
@@ -27,6 +31,8 @@ public class Movement2D : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _anim = GetComponentInChildren<Animator>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -38,14 +44,30 @@ public class Movement2D : MonoBehaviour
         if(inputVector > 0.0f)
         {
             CurrentFacing = FacingDir.Right;
+            playerSprite.flipX = true;
+
+            _anim.ResetTrigger("Idle");
+            _anim.SetTrigger("Walk");
+
         }
         else if(inputVector < 0.0f)
         {
             CurrentFacing = FacingDir.Left;
+            playerSprite.flipX = false;
+
+            _anim.ResetTrigger("Idle");
+            _anim.SetTrigger("Walk");
+        }
+        else
+        {
+            _anim.ResetTrigger("Walk");
+            _anim.SetTrigger("Idle");
         }
 
         bool doJump = false;
         doJump = Input.GetButton("Jump");
+
+
 
         MovementWithFriction(inputVector, doJump);
     }
@@ -92,6 +114,12 @@ public class Movement2D : MonoBehaviour
         else if(doJump)
         {
             yForce = jumpForce;
+
+            _anim.ResetTrigger("Idle");
+            _anim.ResetTrigger("Walk");
+            _anim.SetTrigger("Jump");
+
+
         }
 
         //Calculate acceleration using animation curve
@@ -132,7 +160,10 @@ public class Movement2D : MonoBehaviour
         if(1 < results)
         {
             Vector3.Angle(hitInfo[1].normal, Vector3.up);
+
         }
+
+
 
         _isGrounded = 1 < results;
     }
