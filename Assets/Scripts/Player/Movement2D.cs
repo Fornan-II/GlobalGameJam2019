@@ -154,7 +154,7 @@ public class Movement2D : MonoBehaviour
         }
 
         RaycastHit2D[] hitInfo = new RaycastHit2D[2];
-        int results = Physics2D.CircleCastNonAlloc(transform.position + (Vector3.down * 0.05f), r * 0.7f, Vector2.down, hitInfo, 0.05f);
+        int results = Physics2D.CircleCastNonAlloc(transform.position + (Vector3.down * 0.05f), r * 0.7f, Vector2.down, hitInfo, 0.05f, Physics.AllLayers);
         //Debug.Log(results);
 
 		_isGrounded = false;

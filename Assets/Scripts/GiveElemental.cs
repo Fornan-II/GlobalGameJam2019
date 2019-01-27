@@ -33,7 +33,7 @@ public class GiveElemental : MonoBehaviour
 
             myElemental.HasBefriendedPlayer = true;
             myElemental.myBehavior.CurrentState = ElementalBehavior.State.FOLLOW;
-            this.enabled = false;
+            gameObject.SetActive(false);
         }
     }
 }
