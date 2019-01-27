@@ -48,6 +48,9 @@ public class ElementNode : MonoBehaviour {
     public float grownRadius = 20.0f;
     public bool isColored = false;
     public Material[] TrackedMaterials;
+    public List<ElementSensitive> ThingsActivatedOnNodeInteract;
+    private List<float> _ES_distances;
+    private bool _activateElementSensitives = false;
     protected Animator _anim;
 
 	void Awake ()
@@ -66,6 +69,23 @@ public class ElementNode : MonoBehaviour {
         trackedTransform = trackedElemental.transform;
     }
 
+    public void OnValidate()
+    {
+        _ES_distances = new List<float>();
+        foreach(ElementSensitive es in ThingsActivatedOnNodeInteract)
+        {
+            if(es)
+            {
+                float dist = (transform.position - es.transform.position).magnitude;
+                _ES_distances.Add(dist);
+            }
+            else
+            {
+                _ES_distances.Add(float.PositiveInfinity);
+            }
+        }
+    }
+
     void Update ()
     {
         if (TrackedMaterials.Length >= 1)
@@ -74,6 +94,18 @@ public class ElementNode : MonoBehaviour {
             {
                 m.SetVector("_Position", trackedTransform.position);
                 m.SetFloat("_Radius", colorRadius);
+            }
+        }
+
+        if(_activateElementSensitives && ThingsActivatedOnNodeInteract.Count >= 1)
+        {
+            for(int i = 0; i < ThingsActivatedOnNodeInteract.Count; i++)
+            {
+                if(_ES_distances[i] <= colorRadius)
+                {
+                    ThingsActivatedOnNodeInteract[i].OnElementTouch();
+                    ThingsActivatedOnNodeInteract.RemoveAt(i);
+                }
             }
         }
     }
@@ -92,5 +124,15 @@ public class ElementNode : MonoBehaviour {
     public virtual void SetTrackedToThis()
     {
         trackedTransform = transform;
+    }
+
+    public virtual void BeginActivatingElementSensitives()
+    {
+        _activateElementSensitives = true;
+    }
+
+    public virtual void EndActivatingElementSensitives()
+    {
+        _activateElementSensitives = false;
     }
 }
