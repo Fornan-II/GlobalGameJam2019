@@ -9,7 +9,6 @@ public class Elemental : MonoBehaviour
     public bool FollowPlayer;
     public Transform player;
     public Transform otherTarget;
-    public float interactRange = 10.0f;
     public bool dontLetInteract = false;
     public ElementalBehavior myBehavior;
 
@@ -23,7 +22,7 @@ public class Elemental : MonoBehaviour
         ActiveElementals.Remove(this);
     }
 
-    public void DoInteract()
+    public void DoInteract(ElementNode node)
     {
         if(dontLetInteract)
         {
@@ -32,10 +31,9 @@ public class Elemental : MonoBehaviour
 
         Debug.Log(name + " trying to interact...");
 
-        ElementNode nodeToInteractWith = ElementNode.GetNearestNode(player.position, interactRange, true);
-        if(nodeToInteractWith)
+        if(node)
         {
-            otherTarget = nodeToInteractWith.transform;
+            otherTarget = node.transform;
             myBehavior.objectOfInterest = otherTarget;
             myBehavior.CurrentState = ElementalBehavior.State.INTERACT;
             dontLetInteract = true;

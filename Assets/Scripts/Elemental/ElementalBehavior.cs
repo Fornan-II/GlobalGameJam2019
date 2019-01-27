@@ -67,12 +67,12 @@ public class ElementalBehavior : MonoBehaviour
 
         if (angleBetween > 0.0f)
         {
-            Debug.Log("greater than 0");
+            //Debug.Log("greater than 0");
             turningMultiplier = Mathf.Clamp(turningMultiplier - rotRange * Time.fixedDeltaTime, -rotRange, rotRange);
         }
         else if(angleBetween < 0.0f)
         {
-            Debug.Log("less than 0");
+            //Debug.Log("less than 0");
             turningMultiplier = Mathf.Clamp(turningMultiplier + rotRange * Time.fixedDeltaTime, -rotRange, rotRange);   
         }
         
