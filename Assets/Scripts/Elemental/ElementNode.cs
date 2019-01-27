@@ -67,14 +67,20 @@ public class ElementNode : MonoBehaviour {
     {
         _anim = GetComponent<Animator>();
         trackedTransform = trackedElemental.transform;
+        Sync_ES_distances();
     }
 
     public void OnValidate()
     {
+        Sync_ES_distances();
+    }
+
+    private void Sync_ES_distances()
+    {
         _ES_distances = new List<float>();
-        foreach(ElementSensitive es in ThingsActivatedOnNodeInteract)
+        foreach (ElementSensitive es in ThingsActivatedOnNodeInteract)
         {
-            if(es)
+            if (es)
             {
                 float dist = (transform.position - es.transform.position).magnitude;
                 _ES_distances.Add(dist);

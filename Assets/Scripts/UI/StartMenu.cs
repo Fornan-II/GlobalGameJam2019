@@ -19,6 +19,7 @@ public class StartMenu : MonoBehaviour {
         panel.SetActive(true);
 
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         started = false;
     }
@@ -29,6 +30,7 @@ public class StartMenu : MonoBehaviour {
         panel.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         started = true;
     }
